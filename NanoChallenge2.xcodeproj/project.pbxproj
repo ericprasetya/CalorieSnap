@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4350A93E2A1C69A3002EB765 /* NanoChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A93D2A1C69A3002EB765 /* NanoChallenge2App.swift */; };
+		4350A9402A1C69A3002EB765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A93F2A1C69A3002EB765 /* ContentView.swift */; };
+		4350A9422A1C69A4002EB765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4350A9412A1C69A4002EB765 /* Assets.xcassets */; };
+		4350A9452A1C69A4002EB765 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4350A9442A1C69A4002EB765 /* Preview Assets.xcassets */; };
+		4350A94C2A1C6F58002EB765 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A94B2A1C6F58002EB765 /* AppColor.swift */; };
+		4350A94E2A1C73A5002EB765 /* DetectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A94D2A1C73A5002EB765 /* DetectView.swift */; };
+		4350A9502A1C748E002EB765 /* NutritionFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A94F2A1C748E002EB765 /* NutritionFactsView.swift */; };
+		4350A9522A1C751E002EB765 /* CenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9512A1C751E002EB765 /* CenterView.swift */; };
+		4350A9542A1C7839002EB765 /* HistoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9532A1C7839002EB765 /* HistoryCardView.swift */; };
+		4350A9562A1C8058002EB765 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9552A1C8058002EB765 /* RoundedCorner.swift */; };
+		4350A9582A1C9755002EB765 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9572A1C9755002EB765 /* HistoryView.swift */; };
+		4350A95A2A1D23BF002EB765 /* DetectResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9592A1D23BF002EB765 /* DetectResultView.swift */; };
+		4350A95C2A1D2C14002EB765 /* FoodWeightFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A95B2A1D2C14002EB765 /* FoodWeightFormView.swift */; };
+		4350A95F2A1D33BC002EB765 /* Camera-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4350A95E2A1D33BC002EB765 /* Camera-SwiftUI */; };
+		4350A9612A1D3971002EB765 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9602A1D3971002EB765 /* CameraView.swift */; };
+		4350A9642A1DBC41002EB765 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9632A1DBC41002EB765 /* Classifier.swift */; };
+		4350A9662A1DBC52002EB765 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9652A1DBC52002EB765 /* ImageClassifier.swift */; };
+		4350A9682A1DBF41002EB765 /* FoodDetectorModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9672A1DBF40002EB765 /* FoodDetectorModel.mlmodel */; };
+		4350A96A2A1E5CE9002EB765 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9692A1E5CE9002EB765 /* Food.swift */; };
+		4350A96C2A1E5F0C002EB765 /* DetectedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A96B2A1E5F0C002EB765 /* DetectedFood.swift */; };
+		4350A96E2A1E5F4A002EB765 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A96D2A1E5F4A002EB765 /* FoodViewModel.swift */; };
+		4350A9752A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9732A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodeld */; };
+		4350A9772A1E67CD002EB765 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9762A1E67CD002EB765 /* DataManager.swift */; };
+		4350A97A2A1E6868002EB765 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A9792A1E6868002EB765 /* ResultModel.swift */; };
+		4350A97D2A1E7326002EB765 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350A97C2A1E7326002EB765 /* ResultViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4350A93A2A1C69A3002EB765 /* NanoChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4350A93D2A1C69A3002EB765 /* NanoChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge2App.swift; sourceTree = "<group>"; };
+		4350A93F2A1C69A3002EB765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4350A9412A1C69A4002EB765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4350A9442A1C69A4002EB765 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4350A94B2A1C6F58002EB765 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		4350A94D2A1C73A5002EB765 /* DetectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectView.swift; sourceTree = "<group>"; };
+		4350A94F2A1C748E002EB765 /* NutritionFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsView.swift; sourceTree = "<group>"; };
+		4350A9512A1C751E002EB765 /* CenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterView.swift; sourceTree = "<group>"; };
+		4350A9532A1C7839002EB765 /* HistoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCardView.swift; sourceTree = "<group>"; };
+		4350A9552A1C8058002EB765 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		4350A9572A1C9755002EB765 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		4350A9592A1D23BF002EB765 /* DetectResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultView.swift; sourceTree = "<group>"; };
+		4350A95B2A1D2C14002EB765 /* FoodWeightFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeightFormView.swift; sourceTree = "<group>"; };
+		4350A9602A1D3971002EB765 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4350A9622A1D39FC002EB765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4350A9632A1DBC41002EB765 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		4350A9652A1DBC52002EB765 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		4350A9672A1DBF40002EB765 /* FoodDetectorModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodDetectorModel.mlmodel; sourceTree = "<group>"; };
+		4350A9692A1E5CE9002EB765 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		4350A96B2A1E5F0C002EB765 /* DetectedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedFood.swift; sourceTree = "<group>"; };
+		4350A96D2A1E5F4A002EB765 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		4350A9742A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieSnapCoreData.xcdatamodel; sourceTree = "<group>"; };
+		4350A9762A1E67CD002EB765 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4350A9792A1E6868002EB765 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		4350A97C2A1E7326002EB765 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4350A9372A1C69A3002EB765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4350A95F2A1D33BC002EB765 /* Camera-SwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4350A9312A1C69A3002EB765 = {
+			isa = PBXGroup;
+			children = (
+				4350A93C2A1C69A3002EB765 /* NanoChallenge2 */,
+				4350A93B2A1C69A3002EB765 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4350A93B2A1C69A3002EB765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4350A93A2A1C69A3002EB765 /* NanoChallenge2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4350A93C2A1C69A3002EB765 /* NanoChallenge2 */ = {
+			isa = PBXGroup;
+			children = (
+				4350A97F2A1F2F94002EB765 /* Utilities */,
+				4350A97E2A1F2F31002EB765 /* CoreData */,
+				4350A9702A1E5F70002EB765 /* Detect */,
+				4350A96F2A1E5F5F002EB765 /* History */,
+				4350A9622A1D39FC002EB765 /* Info.plist */,
+				4350A93D2A1C69A3002EB765 /* NanoChallenge2App.swift */,
+				4350A93F2A1C69A3002EB765 /* ContentView.swift */,
+				4350A9412A1C69A4002EB765 /* Assets.xcassets */,
+				4350A9432A1C69A4002EB765 /* Preview Content */,
+			);
+			path = NanoChallenge2;
+			sourceTree = "<group>";
+		};
+		4350A9432A1C69A4002EB765 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4350A9442A1C69A4002EB765 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4350A96F2A1E5F5F002EB765 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4350A97B2A1E7319002EB765 /* ViewModels */,
+				4350A9782A1E685C002EB765 /* Model */,
+				4350A9572A1C9755002EB765 /* HistoryView.swift */,
+				4350A9532A1C7839002EB765 /* HistoryCardView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		4350A9702A1E5F70002EB765 /* Detect */ = {
+			isa = PBXGroup;
+			children = (
+				4350A9722A1E5FC4002EB765 /* ViewModels */,
+				4350A9712A1E5F9B002EB765 /* Model */,
+				4350A94D2A1C73A5002EB765 /* DetectView.swift */,
+				4350A94F2A1C748E002EB765 /* NutritionFactsView.swift */,
+				4350A9592A1D23BF002EB765 /* DetectResultView.swift */,
+				4350A9602A1D3971002EB765 /* CameraView.swift */,
+				4350A95B2A1D2C14002EB765 /* FoodWeightFormView.swift */,
+				4350A9632A1DBC41002EB765 /* Classifier.swift */,
+				4350A9652A1DBC52002EB765 /* ImageClassifier.swift */,
+			);
+			path = Detect;
+			sourceTree = "<group>";
+		};
+		4350A9712A1E5F9B002EB765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4350A9692A1E5CE9002EB765 /* Food.swift */,
+				4350A96B2A1E5F0C002EB765 /* DetectedFood.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4350A9722A1E5FC4002EB765 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4350A96D2A1E5F4A002EB765 /* FoodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4350A9782A1E685C002EB765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4350A9792A1E6868002EB765 /* ResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4350A97B2A1E7319002EB765 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4350A97C2A1E7326002EB765 /* ResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4350A97E2A1F2F31002EB765 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4350A9762A1E67CD002EB765 /* DataManager.swift */,
+				4350A9732A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4350A97F2A1F2F94002EB765 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4350A94B2A1C6F58002EB765 /* AppColor.swift */,
+				4350A9512A1C751E002EB765 /* CenterView.swift */,
+				4350A9672A1DBF40002EB765 /* FoodDetectorModel.mlmodel */,
+				4350A9552A1C8058002EB765 /* RoundedCorner.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4350A9392A1C69A3002EB765 /* NanoChallenge2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4350A9482A1C69A4002EB765 /* Build configuration list for PBXNativeTarget "NanoChallenge2" */;
+			buildPhases = (
+				4350A9362A1C69A3002EB765 /* Sources */,
+				4350A9372A1C69A3002EB765 /* Frameworks */,
+				4350A9382A1C69A3002EB765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NanoChallenge2;
+			packageProductDependencies = (
+				4350A95E2A1D33BC002EB765 /* Camera-SwiftUI */,
+			);
+			productName = NanoChallenge2;
+			productReference = 4350A93A2A1C69A3002EB765 /* NanoChallenge2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4350A9322A1C69A3002EB765 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4350A9392A1C69A3002EB765 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 4350A9352A1C69A3002EB765 /* Build configuration list for PBXProject "NanoChallenge2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4350A9312A1C69A3002EB765;
+			packageReferences = (
+				4350A95D2A1D33BC002EB765 /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */,
+			);
+			productRefGroup = 4350A93B2A1C69A3002EB765 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4350A9392A1C69A3002EB765 /* NanoChallenge2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4350A9382A1C69A3002EB765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4350A9452A1C69A4002EB765 /* Preview Assets.xcassets in Resources */,
+				4350A9422A1C69A4002EB765 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4350A9362A1C69A3002EB765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4350A95A2A1D23BF002EB765 /* DetectResultView.swift in Sources */,
+				4350A9772A1E67CD002EB765 /* DataManager.swift in Sources */,
+				4350A9562A1C8058002EB765 /* RoundedCorner.swift in Sources */,
+				4350A97D2A1E7326002EB765 /* ResultViewModel.swift in Sources */,
+				4350A9682A1DBF41002EB765 /* FoodDetectorModel.mlmodel in Sources */,
+				4350A9502A1C748E002EB765 /* NutritionFactsView.swift in Sources */,
+				4350A97A2A1E6868002EB765 /* ResultModel.swift in Sources */,
+				4350A9642A1DBC41002EB765 /* Classifier.swift in Sources */,
+				4350A96A2A1E5CE9002EB765 /* Food.swift in Sources */,
+				4350A9612A1D3971002EB765 /* CameraView.swift in Sources */,
+				4350A96C2A1E5F0C002EB765 /* DetectedFood.swift in Sources */,
+				4350A9522A1C751E002EB765 /* CenterView.swift in Sources */,
+				4350A9542A1C7839002EB765 /* HistoryCardView.swift in Sources */,
+				4350A9752A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodeld in Sources */,
+				4350A9402A1C69A3002EB765 /* ContentView.swift in Sources */,
+				4350A93E2A1C69A3002EB765 /* NanoChallenge2App.swift in Sources */,
+				4350A94C2A1C6F58002EB765 /* AppColor.swift in Sources */,
+				4350A9582A1C9755002EB765 /* HistoryView.swift in Sources */,
+				4350A96E2A1E5F4A002EB765 /* FoodViewModel.swift in Sources */,
+				4350A94E2A1C73A5002EB765 /* DetectView.swift in Sources */,
+				4350A9662A1DBC52002EB765 /* ImageClassifier.swift in Sources */,
+				4350A95C2A1D2C14002EB765 /* FoodWeightFormView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4350A9462A1C69A4002EB765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4350A9472A1C69A4002EB765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4350A9492A1C69A4002EB765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge2/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SC4Z3N76K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoChallenge2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalorieSnap;
+				INFOPLIST_KEY_NSCameraUsageDescription = "SwiftCamera needs access to your camera to capture photo and video";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.NanoChallenge2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4350A94A2A1C69A4002EB765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge2/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SC4Z3N76K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoChallenge2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalorieSnap;
+				INFOPLIST_KEY_NSCameraUsageDescription = "SwiftCamera needs access to your camera to capture photo and video";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.NanoChallenge2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4350A9352A1C69A3002EB765 /* Build configuration list for PBXProject "NanoChallenge2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4350A9462A1C69A4002EB765 /* Debug */,
+				4350A9472A1C69A4002EB765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4350A9482A1C69A4002EB765 /* Build configuration list for PBXNativeTarget "NanoChallenge2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4350A9492A1C69A4002EB765 /* Debug */,
+				4350A94A2A1C69A4002EB765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4350A95D2A1D33BC002EB765 /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rorodriguez116/Camera-SwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4350A95E2A1D33BC002EB765 /* Camera-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4350A95D2A1D33BC002EB765 /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */;
+			productName = "Camera-SwiftUI";
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4350A9732A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4350A9742A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodel */,
+			);
+			currentVersion = 4350A9742A1E6768002EB765 /* CalorieSnapCoreData.xcdatamodel */;
+			path = CalorieSnapCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4350A9322A1C69A3002EB765 /* Project object */;
+}
