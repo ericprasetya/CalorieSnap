@@ -28,10 +28,11 @@ class ImageClassifier: ObservableObject {
         var objectNames: [String] = []
 
         for observation in observations {
-            guard let labels = observation.labels as? [VNClassificationObservation] else {
-                // Handle case when labels cannot be cast to [VNClassificationObservation]
-                continue
-            }
+//            guard let labels = observation.labels as? [VNClassificationObservation] else {
+//                // Handle case when labels cannot be cast to [VNClassificationObservation]
+//                continue
+//            }
+            let labels = observation.labels
             let objectName = labels.first?.identifier ?? "Unknown"
             objectNames.append(objectName)
             

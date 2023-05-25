@@ -21,16 +21,16 @@ struct Classifier {
         }
         
         let request = VNCoreMLRequest(model: model)
+//        request.imageCropAndScaleOption = .scaleFill
         
-        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
-        
+        let handler = VNImageRequestHandler(ciImage: ciImage, orientation: .up, options: [:])
         try? handler.perform([request])
         
         guard let results = request.results as? [VNRecognizedObjectObservation] else {
             return
         }
         self.results = results
-//        print(results)
+        print(results)
 //        if let firstResult = results.first {
 //            self.results = firstResult.identifier
 //        }

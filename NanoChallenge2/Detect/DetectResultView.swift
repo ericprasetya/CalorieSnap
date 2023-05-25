@@ -10,33 +10,55 @@ import Vision
 struct ObjectDetectionView: View {
     let image: UIImage
     let observations: [VNRecognizedObjectObservation]?
+    
+    @State private var setRotate: Angle = .degrees(0)
+    @State private var setPosition: CGPoint = .zero
+    
     var body: some View {
         if observations == nil {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 240, height: 240)
-                .cornerRadius(20)
+            CenterView {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 240, height: 240)
+                    .cornerRadius(20)
+                
+            }
         } else {
             GeometryReader { geometry in
-                ZStack(alignment: .topLeading) { // Align the bounding boxes and labels to top leading corner
+                ZStack(alignment: .top) {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                        .frame(width: 240, height: 240)
+                        .cornerRadius(20)
+//                        .rotationEffect(setRotate)
+//                        .position(setPosition)
                     
                     if let observations = observations {
                         ForEach(observations, id: \.self) { observation in
-                            let convertedRect = convertRect(observation.boundingBox, imageSize: image.size, viewSize: geometry.size) // Convert the bounding box rect coordinates
+                            let convertedRect = convertRect(observation.boundingBox, imageSize: image.size, viewSize: CGSize(width: 240/image.size.height*image.size.width, height: 240))
                             BoundingBoxView(rect: convertedRect)
+//                                .position(x: convertedRect.midX, y: convertedRect.midY)
                             ObjectLabel(label: observation.labels.first?.identifier ?? "Unknown", rect: convertedRect)
                         }
                     }
                 }
-                .cornerRadius(20)
+                .onAppear {
+                    updateLayerGeometry(bounds: geometry.frame(in: .local), bufferSize: image.size)
+                }
             }
-            .frame(width: 240, height: 240)
         }
+    }
+    
+    func updateLayerGeometry(bounds: CGRect, bufferSize: CGSize) {
+        let scaleFactor = min(bounds.size.width / bufferSize.width, bounds.size.height / bufferSize.height)
+        let scaledImageSize = CGSize(width: bufferSize.width * scaleFactor, height: bufferSize.height * scaleFactor)
+        let xPosition = (bounds.size.width - scaledImageSize.width) / 2
+        let yPosition = (bounds.size.height - scaledImageSize.height) / 2
         
+        setRotate = .degrees(90)
+        setPosition = CGPoint(x: xPosition + (scaledImageSize.width / 2), y: yPosition + (scaledImageSize.height / 2))
     }
     
     private func convertRect(_ rect: CGRect, imageSize: CGSize, viewSize: CGSize) -> CGRect {
@@ -45,26 +67,19 @@ struct ObjectDetectionView: View {
         let viewWidth = viewSize.width
         let viewHeight = viewSize.height
         
+        let x = rect.origin.x * imageWidth
+        let y = (rect.origin.y) * imageHeight
+        let width = rect.size.width * imageWidth
+        let height = rect.size.height * imageHeight
+        
+        let convertedRect = CGRect(x: x, y: y, width: width, height: height)
+        
         let scaleX = viewWidth / imageWidth
         let scaleY = viewHeight / imageHeight
         
-        // Convert the bounding box rect coordinates
-        let transformedOrigin = CGPoint(x: rect.origin.x * scaleX, y: rect.origin.y * scaleY)
-        let transformedSize = CGSize(width: rect.size.width * scaleX, height: rect.size.height * scaleY)
-        print(transformedSize)
-        return CGRect(origin: transformedOrigin, size: transformedSize)
-    }
-}
-
-
-struct ObjectBoundingBox: View {
-    let rect: CGRect
-    
-    var body: some View {
-        Rectangle()
-            .stroke(Color.red, lineWidth: 2)
-            .frame(width: rect.size.width, height: rect.size.height)
-            .position(x: rect.midX, y: rect.midY)
+        let transformedRect = CGRect(x: convertedRect.origin.x * scaleX, y: convertedRect.origin.y * scaleY, width: convertedRect.size.width * scaleX, height: convertedRect.size.height * scaleY)
+        
+        return transformedRect
     }
 }
 
@@ -88,11 +103,12 @@ struct BoundingBoxView: View {
     
     var body: some View {
         Rectangle()
-            .stroke(Color.red, lineWidth: 10)
+            .stroke(Color.red, lineWidth: 2)
             .frame(width: rect.width, height: rect.height)
             .position(x: rect.midX, y: rect.midY)
     }
 }
+
 
 
 struct DetectResultView: View {
@@ -145,7 +161,7 @@ struct DetectResultView: View {
                                         .environmentObject(foodVM)
                                         .padding(.top, 45)
                                 }
-                                
+
                                 Spacer()
                                 HStack {
                                     Spacer()

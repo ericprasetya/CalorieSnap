@@ -126,7 +126,7 @@ struct CameraView: View {
                 .foregroundColor(Color.gray.opacity(0.2))
                 .frame(width: 45, height: 45, alignment: .center)
                 .overlay(
-                    Image(systemName: "camera.rotate.fill")
+                    Image(systemName: "arrow.triangle.2.circlepath")
                         .foregroundColor(.white))
         })
     }
