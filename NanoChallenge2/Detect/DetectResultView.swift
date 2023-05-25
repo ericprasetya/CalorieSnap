@@ -2,7 +2,7 @@
 //  DetectResultView.swift
 //  NanoChallenge2
 //
-//  Created by Jessica Rachel Santoso on 23/05/23.
+//  Created by Eric Prasetya Sentosa on 23/05/23.
 //
 
 import SwiftUI
